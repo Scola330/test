@@ -40,7 +40,7 @@
             // NumerKontaLabel
             // 
             NumerKontaLabel.AutoSize = true;
-            NumerKontaLabel.Location = new Point(12, 53);
+            NumerKontaLabel.Location = new Point(26, 36);
             NumerKontaLabel.Name = "NumerKontaLabel";
             NumerKontaLabel.Size = new Size(83, 15);
             NumerKontaLabel.TabIndex = 0;
@@ -49,14 +49,14 @@
             // 
             // AcountTextBox
             // 
-            AcountTextBox.Location = new Point(112, 49);
+            AcountTextBox.Location = new Point(126, 32);
             AcountTextBox.Name = "AcountTextBox";
             AcountTextBox.Size = new Size(100, 23);
             AcountTextBox.TabIndex = 1;
             // 
             // TestButton
             // 
-            TestButton.Location = new Point(218, 49);
+            TestButton.Location = new Point(232, 32);
             TestButton.Name = "TestButton";
             TestButton.Size = new Size(116, 23);
             TestButton.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // testBox
             // 
-            testBox.Location = new Point(68, 410);
+            testBox.Location = new Point(82, 393);
             testBox.Name = "testBox";
             testBox.ReadOnly = true;
             testBox.Size = new Size(662, 132);
@@ -76,7 +76,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(33, 113);
+            label1.Location = new Point(47, 96);
             label1.Name = "label1";
             label1.Size = new Size(38, 15);
             label1.TabIndex = 4;
@@ -85,7 +85,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(33, 152);
+            label2.Location = new Point(47, 135);
             label2.Name = "label2";
             label2.Size = new Size(38, 15);
             label2.TabIndex = 5;
@@ -94,7 +94,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(33, 189);
+            label3.Location = new Point(47, 172);
             label3.Name = "label3";
             label3.Size = new Size(38, 15);
             label3.TabIndex = 6;
@@ -104,7 +104,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 554);
+            ClientSize = new Size(784, 554);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -114,6 +114,7 @@
             Controls.Add(NumerKontaLabel);
             Name = "Form1";
             Text = "Form1";
+            Load += label4_Click;
             ResumeLayout(false);
             PerformLayout();
         }

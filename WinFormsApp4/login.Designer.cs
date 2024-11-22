@@ -62,7 +62,7 @@
             HasloRichTextBox2.Name = "HasloRichTextBox2";
             HasloRichTextBox2.Size = new Size(236, 106);
             HasloRichTextBox2.TabIndex = 1;
-            HasloRichTextBox2.Text = "";
+            HasloRichTextBox2.Text = "Mh26l5aGfC=^";
             // 
             // EmailRichTextBox1
             // 
@@ -70,7 +70,8 @@
             EmailRichTextBox1.Name = "EmailRichTextBox1";
             EmailRichTextBox1.Size = new Size(236, 106);
             EmailRichTextBox1.TabIndex = 0;
-            EmailRichTextBox1.Text = "";
+            EmailRichTextBox1.Text = "Skibid1@gmail.com";
+            EmailRichTextBox1.TextChanged += EmailRichTextBox1_TextChanged;
             // 
             // tableLayoutPanel2
             // 
@@ -143,7 +144,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(759, 450);
+            ClientSize = new Size(759, 410);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);

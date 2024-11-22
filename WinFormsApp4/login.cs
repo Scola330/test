@@ -28,7 +28,7 @@ namespace WinFormsApp4
             HttpClient client = new HttpClient();
             string url = "http://localhost/bankAPI/login/";
             var data = new { email = email, password = password };
-            HttpResponseMessage response = 
+            HttpResponseMessage response =
                 client.PostAsJsonAsync(url, data).Result;
             string json = response.Content.ReadAsStringAsync().Result ?? "";
             hash_data hash = JsonConvert.DeserializeObject<hash_data>(json);
@@ -37,9 +37,15 @@ namespace WinFormsApp4
             this.Close();
         }
 
+
         private void WyjdzButtonPressed(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void EmailRichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

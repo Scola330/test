@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             ilośćNumericUpDown1 = new NumericUpDown();
-            SourceTextBox1 = new TextBox();
             TargetTextBox2 = new TextBox();
             LayerGroupBox = new GroupBox();
             exitTransferButton = new Button();
             przelewButton = new Button();
             label3 = new Label();
             label2 = new Label();
-            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)ilośćNumericUpDown1).BeginInit();
             LayerGroupBox.SuspendLayout();
             SuspendLayout();
@@ -48,13 +46,6 @@
             ilośćNumericUpDown1.Name = "ilośćNumericUpDown1";
             ilośćNumericUpDown1.Size = new Size(193, 23);
             ilośćNumericUpDown1.TabIndex = 0;
-            // 
-            // SourceTextBox1
-            // 
-            SourceTextBox1.Location = new Point(124, 30);
-            SourceTextBox1.Name = "SourceTextBox1";
-            SourceTextBox1.Size = new Size(193, 23);
-            SourceTextBox1.TabIndex = 1;
             // 
             // TargetTextBox2
             // 
@@ -69,10 +60,8 @@
             LayerGroupBox.Controls.Add(przelewButton);
             LayerGroupBox.Controls.Add(label3);
             LayerGroupBox.Controls.Add(label2);
-            LayerGroupBox.Controls.Add(label1);
             LayerGroupBox.Controls.Add(ilośćNumericUpDown1);
             LayerGroupBox.Controls.Add(TargetTextBox2);
-            LayerGroupBox.Controls.Add(SourceTextBox1);
             LayerGroupBox.Location = new Point(12, 12);
             LayerGroupBox.Name = "LayerGroupBox";
             LayerGroupBox.Size = new Size(343, 204);
@@ -118,15 +107,6 @@
             label2.TabIndex = 4;
             label2.Text = "Konto docelowe  :";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(22, 33);
-            label1.Name = "label1";
-            label1.Size = new Size(96, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Konto źródłowe :";
-            // 
             // transfer_form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -144,13 +124,11 @@
         #endregion
 
         private NumericUpDown ilośćNumericUpDown1;
-        private TextBox SourceTextBox1;
         private TextBox TargetTextBox2;
         private GroupBox LayerGroupBox;
         private Button przelewButton;
         private Label label3;
         private Label label2;
-        private Label label1;
         private Button exitTransferButton;
     }
 }

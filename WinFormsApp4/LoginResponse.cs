@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp4
 {
-    public class hash_data
+    internal class LoginResponse
     {
-        //kurłaaaaaaaa ale ten copilot jest upośledzony
-        public required string token { get; set; }
     }
 }

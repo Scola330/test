@@ -21,20 +21,30 @@ namespace WinFormsApp4
             InitializeComponent();
         }
 
-        private void LoginButtonPressed(object sender, EventArgs e)
+        private async void LoginButtonPressed(object sender, EventArgs e)
         {
             string email = EmailRichTextBox1.Text;
             string password = HasloRichTextBox2.Text;
             HttpClient client = new HttpClient();
             string url = "http://localhost/bankAPI/login/";
-            var data = new { email = email, password = password };
-            HttpResponseMessage response =
-                client.PostAsJsonAsync(url, data).Result;
-            string json = response.Content.ReadAsStringAsync().Result ?? "";
-            hash_data hash = JsonConvert.DeserializeObject<hash_data>(json);
-            MainForm.hash = hash.token;
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            LoginRequest data = new LoginRequest(email, password);
+            try
+            {
+                HttpResponseMessage response = await client.PostAsJsonAsync(url, data);
+                string json = await response.Content.ReadAsStringAsync();
+                hash_data hash = JsonConvert.DeserializeObject<hash_data>(json);
+                MainForm.hash = hash.token;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (TaskCanceledException ex)
+            {
+                MessageBox.Show("The request was canceled. Please try again.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
 
 

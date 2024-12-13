@@ -31,6 +31,7 @@
             ilośćNumericUpDown1 = new NumericUpDown();
             TargetTextBox2 = new TextBox();
             LayerGroupBox = new GroupBox();
+            button1 = new Button();
             exitTransferButton = new Button();
             przelewButton = new Button();
             label3 = new Label();
@@ -56,6 +57,7 @@
             // 
             // LayerGroupBox
             // 
+            LayerGroupBox.Controls.Add(button1);
             LayerGroupBox.Controls.Add(exitTransferButton);
             LayerGroupBox.Controls.Add(przelewButton);
             LayerGroupBox.Controls.Add(label3);
@@ -68,6 +70,16 @@
             LayerGroupBox.TabIndex = 3;
             LayerGroupBox.TabStop = false;
             LayerGroupBox.Text = "przelew :";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(16, 27);
+            button1.Name = "button1";
+            button1.Size = new Size(301, 23);
+            button1.TabIndex = 8;
+            button1.Text = "historia";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += OpenTransferHistory;
             // 
             // exitTransferButton
             // 
@@ -130,5 +142,6 @@
         private Label label3;
         private Label label2;
         private Button exitTransferButton;
+        private Button button1;
     }
 }

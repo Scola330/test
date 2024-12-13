@@ -33,11 +33,13 @@ namespace WinFormsApp4
             string target_account = TargetTextBox2.Text;
             double amount_input = double.Parse(ilośćNumericUpDown1.Text);
             int amount = (int)Math.Round(amount_input * 100);
-            var data = new{
+            var data = new
+            {
                 token = hash,
                 id_account = id_account,
                 target_account = target_account,
-                amount = amount };
+                amount = amount
+            };
             string url = "http://localhost/bankAPI/transfer/new";
             HttpClient client = new HttpClient();
 
@@ -50,6 +52,12 @@ namespace WinFormsApp4
             {
                 MessageBox.Show("Transfer failed");
             }
+        }
+
+        private void OpenTransferHistory(object sender, EventArgs e)
+        {
+            TransferHistory transferHistoryForm = new TransferHistory();
+            transferHistoryForm.Show();
         }
     }
 }

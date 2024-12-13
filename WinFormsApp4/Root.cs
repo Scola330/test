@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace WinFormsApp4
 {
     public class Root
     {
-        [JsonPropertyName("MyArray")]
-        public List<MyArray> MyArray { get; set; }
+        [JsonProperty("history")]
+        public List<History> history { get; set; }
     }
 }

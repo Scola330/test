@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp4
 {
-    public class MyArray
+    public class History
     {
-        [JsonPropertyName("ID")]
+        [JsonProperty("ID")]
         public string ID { get; set; }
 
-        [JsonPropertyName("source_usser_id")]
+        [JsonProperty("source_usser_id")]
         public string source_usser_id { get; set; }
 
-        [JsonPropertyName("destination_usser_id")]
+        [JsonProperty("destination_usser_id")]
         public string destination_usser_id { get; set; }
 
-        [JsonPropertyName("timestamp")]
+        [JsonProperty("timestamp")]
         public string timestamp { get; set; }
 
-        [JsonPropertyName("transfer_amount")]
+        [JsonProperty("transfer_amount")]
         public string transfer_amount { get; set; }
     }
 }
